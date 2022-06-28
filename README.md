@@ -5,7 +5,7 @@
 
 
 
-## <h1 align="center" id="heading">:wave: Welcome to MLOps Cohort 4 (July 2022)!</h1>
+## <h1 align="center" id="heading">:wave: Welcome to Software Development for MLOps 101!!</h1>
 
 Welcome to MLOps! :tada: Follow these steps to get your development environment teed up and aligned to the rest of the class.  This will ensure that we can hit the ground running! :running:
 
