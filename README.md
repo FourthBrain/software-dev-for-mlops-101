@@ -5,9 +5,9 @@
 
 
 
-## <h1 align="center" id="heading">:wave: Welcome to ML Software Developer 101!</h1>
+## <h1 align="center" id="heading">:wave: Welcome to MLOps Cohort 4 (July 2022)!</h1>
 
-Welcome to the beginning of your journey to becoming an ML Engineer (MLE)! :tada: Follow these steps to get your development environment teed up! After you've finished this set-up, feel free to go through the associated `Whodunit?`! 🕵️‍♀️
+Welcome to MLOps! :tada: Follow these steps to get your development environment teed up and aligned to the rest of the class.  This will ensure that we can hit the ground running! :running:
 
 
 ## :books: Quick Review
@@ -29,8 +29,6 @@ We will be using some terminal commands, so let's make sure you know what they a
 | `touch {filename}.{ext}`   | touch        | create new empty file |
 | `rmdir {dirname}`   | remove directory        | deletes a directory |
 | `ssh {username}@{ip-address} or {hostname}`   | secure shell        | login into a remote Linux machine using SSH |
-| `CTRL + SHIFT + C` | copy | keyboard shortcut for copying from terminal |
-| `CTRL + SHIFT + V` | paste | keyboard shortcut for pasting into terminal |
 
 <p></p>
 
@@ -57,31 +55,11 @@ Conda is an open-source, cross-platform, language-agnostic package manager and e
 
 Some commands we will use in this lesson when it comes to `conda` and `pip`:
 
-`conda create --name mle-course python=3.8 pip` -> This creates a virtual environment. A virtual environment is a Python environment such that the Python interpreter, libraries, amnd scripts installed into it are isolated from those installed on other environments and any libraries installed on the system. So basically, this allows you to keep all your project's code/dependencies/libraries separated from other projects. You are specifically saying to create said environment with the name `mle-course`, use `python` version 3.8, and use `pip` as your package manager. The command `conda` invokes the underlying logic to actually make the virtual environment and manages said environments for you.
+`conda create --name mlops-course python=3.8 pip` -> This creates a virtual environment. A virtual environment is a Python environment such that the Python interpreter, libraries, amnd scripts installed into it are isolated from those installed on other environments and any libraries installed on the system. So basically, this allows you to keep all your project's code/dependencies/libraries separated from other projects. You are specifically saying to create said environment with the name `mlops-course`, use `python` version 3.8, and use `pip` as your package manager. The command `conda` invokes the underlying logic to actually make the virtual environment and manages said environments for you.
 
-`conda activate mle-course` -> This activates the virtual environment you made with the above command for your current terminal session.
+`conda activate mlops-course` -> This activates the virtual environment you made with the above command for your current terminal session.
 
-`pip install numpy pandas matplotlib` -> This installs the three packages mentioned - `numpy`, `pandas`, and `matplotlib`. `numpy` is used for scientific computing, `pandas` is used for data analysis, and `matplotlib` is used for data graphics. `pip` is the Python package manager and you are telling it to `install` the listed packages to your environment.
-</details>
-
-<details>
-<summary>Jupyter Notebooks</summary>
-
-Jupyter Notebooks are an incredibly useful tool for experimentation, iteration, exploration, and even production at some companies! 
-
-They have the file extension `.ipynb` (IPYthon NoteBook)
-
-You can learn more about Jupyter and their notebooks [here!](https://jupyter.org/)
-
-In order to use a notebook, you'll first want to make sure you've installed `jupyter` in your environment
-
-1. `conda activate <YOUR ENV NAME HERE>` 
-2. `pip install jupyter`
-
-From here, you can navigate to any folder containing a `.ipynb` file, and run the command `jupyter notebook`. This should launch a server, and provide you with a link. Navigate to the link in your browser in order to get started in your notebook! 
-
-Be sure to terminate the server when you are done! Closing the webpage does not stop the server, so you'll need to make sure you do that manually in the terminal, or before you close the webpage with your server!
-
+`pip install numpy pandas matplotlib jupyter` -> This installs the four packages mentioned - `numpy`, `pandas`, `jupyter` and `matplotlib`. `numpy` is used for scientific computing, `pandas` is used for data analysis, and `matplotlib` is used for data graphics. `jupyter` is discussed later in this tutorial in depth! `pip` is the Python package manager and you are telling it to `install` the listed packages to your environment.
 </details>
 
 <p></p>
@@ -112,6 +90,7 @@ Continue by installing the following tools using [Windows Terminal](https://www.
 | :-------- | :-------- | :------------------------------------------------------------------------------------------------ |
 | :snake: **Anaconda**  | Python & ML Toolkits | `wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh` <br> `bash Anaconda3-2021.11-Linux-x86_64.sh` <br> `source ~/.bashrc` |
 | :octocat: **Git**  | Version Control | `sudo apt update && sudo apt upgrade` <br> `sudo apt install git-all`   |
+| :memo: **VS Code** | Development Environment | [Download](https://code.visualstudio.com/download) |
 
 </details>
 
@@ -123,6 +102,7 @@ Open terminal using <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd>. Enter the fol
 | :-------- | :-------- | :------------------------------------------------------------------------------------------------ |
 | :snake: **Anaconda**  | Python & ML Toolkits | `wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh` <br> `bash Anaconda3-2021.11-Linux-x86_64.sh` <br> `source ~/.bashrc` |
 | :octocat: **Git**  | Version Control | `sudo apt update && sudo apt upgrade` <br> `sudo apt install git-all`   |
+| :memo: **VS Code** | Development Environment | [Download](https://code.visualstudio.com/download) |
 
 </details>
 
@@ -152,6 +132,65 @@ Enter the following commands in terminal to setup your environment. When prompte
 | :-------- | :-------- | :------------------------------------------------------------------------------------------------ |
 | :snake: **Anaconda**  | Python & ML Toolkits | `wget https://repo.anaconda.com/archive/Anaconda3-2021.11-MacOSX-x86_64.sh` <br> `bash Anaconda3-2021.11-MacOSX-x86_64.sh` <br> `source ~/.bashrc` |
 | :octocat: **Git**  | Version Control | `brew install git`   |
+| :memo: **VS Code** | Development Environment | [Download](https://code.visualstudio.com/download) |
+
+</details>
+
+<p></p>
+
+
+## <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Visual_Studio_Code_0.10.1_icon.png" height=40px/> Let's configure our VS Code environment!
+
+<details>
+  <summary>Install the IntelliCode Extension</summary>
+
+  IntelliCode is an AI-powered code completion extension to boost coding productivity. :sunglasses:
+
+  1. Click the `Extensions` <img src="images/vscode_extensions_tab.png" width=30px/> tab in the navigation panel on the left side of VS Code. 
+
+  2. Type "IntelliCode" in the search bar.
+
+  3. Click `install` <img src="images/vscode_install.png" width=30px/> on the <ins><strong>Microsoft IntelliCode Extension</strong></ins>
+
+</details>
+
+<details>
+  <summary>Install the Jupyter Notebook Extension</summary>
+
+  1. Click the `Extensions` <img src="images/vscode_extensions_tab.png" width=30px/> tab on the left side of the window.
+
+  2. Type "Python" in the search bar.
+
+  3. Click `Install` <img src="images/vscode_install.png" width=30px/>  on the <ins><strong>Microsoft Jupyter Notebook Extension</strong></ins>
+
+</details>
+
+<details>
+  <summary>Set the Python Interpreter</summary>
+
+  1. Open VS Code and click on `New File...`
+
+  2. Open the Command Pallette 
+    <strong>(Mac: </strong></ins> <kbd>Shift</kbd><kbd>⌘</kbd>+<kbd>P</kbd> 
+    ,<strong> Windows: </strong></ins> <kbd>Ctrl</kbd>+<kbd>P</kbd>)
+
+  3. Type "Python" in the search bar.
+
+  4. Click on `New Python File`
+
+  5. Open the Command Pallette again.  Can you remember the shortcut?  If    not, see #2 above again.
+
+  6. Type "Python Interpreter".
+
+  7. Click on `Python: Select Interpreter`
+
+  8. Select the `Conda` environment that you installed earlier. 
+  
+  <p align = "center" draggable=”false”>
+  <img src="images/vscode_mlops_interpreter.png"> 
+  </p>
+
+  9. Now you're ready to start coding!
 
 </details>
 
@@ -159,7 +198,7 @@ Enter the following commands in terminal to setup your environment. When prompte
 
 ## <img src="https://octodex.github.com/images/original.png" width=40px/> Let's Make Sure That GitHub is Ready to Roll!
 
-If you don't already have one, make an account on [Github](https://github.com/)
+If you don't already have one, make an account on [Github](https://github.com/)!  
 
 <details>
   <summary>Github SSH Setup</summary>
@@ -179,37 +218,26 @@ If you don't already have one, make an account on [Github](https://github.com/)
   3. At the prompt, type in a secure passphrase.
   4. Copy the contents of the public key that we will share with GitHub. 
 
-  
-  * <strong>For WSL:</strong>
+     * Mac: `pbcopy < ~/.ssh/id_rsa.pub` 
 
-  ```console
-  clip.exe < ~/.ssh/id_rsa.pub 
-  ```
+     * Windows (WSL): `clip.exe < ~/.ssh/id_rsa.pub`
 
-  * <strong>For MacOS:</strong>
-  ```console
-  pbcopy < ~/.ssh/id_rsa.pub 
-  ```
-
-  * <strong>For Linux:</strong>
-  ```console
-  xclip -sel c < ~/.ssh/id_rsa.pub 
-  ```
+     * Linux: `xclip -sel c < ~/.ssh/id_rsa.pub`
   
   5. Go to your GitHub account and go to `Settings`. 
   
-  6. Under `Access`, click on the `SSH and GPG keys` tabs on the left.
+  6. Under `Access`, click on the `SSH and GPG keys` tab on the left.
 
-  ![Access Section](../img/github_access_section.png)
+  ![Access Section](images/github_access_section.png)
 
   7. Click on the `New SSH Key` button.
   
-  ![New SSH Key](../img/github_new_ssh_key.png)
+  ![New SSH Key](images/github_new_ssh_key.png)
   
   8. Name the key, and paste the public key that you copied. Click the `Add SSH Key` button
   
 
-  ![Add SSH Key](../img/github_add_ssh_key.png)
+  ![Add SSH Key](images/github_add_ssh_key.png)
 
 </details>
 
@@ -288,13 +316,7 @@ Then click `Create Repository`.
   ```console
   git clone {your repo url}
   ```
-     
-  5. Now let's get into our directory so we can access the contents of the repo!
 
-  ```console
-  cd {your repo name}
-  ```
-     
 </details>
 
 <details>
@@ -436,36 +458,111 @@ Then click `Create Repository`.
   ```
 </details>
 
+<p></p>
 
-<p> </p>
+## <img src="https://jupyter.org/assets/homepage/main-logo.svg" width=40px/>  Bringing it all together with Jupyter Notebooks
 
-## <img src="https://jupyter.org/assets/homepage/main-logo.svg" width=40px/> Bringing it all together with Jupyter notebooks!
 <details>
-<summary>Jupyter notebooks</summary>
 
-  1. First, make sure that you are in your repo's main directory.  Then navigate to the MLE-8 folder of your repo.  `HINT:` You can use `pwd` to see the directory you're currently in.
+  <summary>Activating Your Conda Environment</summary>
 
-  2. Navigate to the `notebooks` folder within the `software-dev-for-ml-101` folder.
-
-  ```console
-  cd software-dev-for-ml-101/notebooks
-  ```
-
-  3. Activate your conda environment that you created above.
-  
-  ```console
-  conda activate <YOUR ENV NAME HERE>
-  ```
-
-  4. Run the `jupyter notebook` command. 
-
-  5. A new window should open in your browser with the Jupyter Server.  If not copy and paste the give link in your browser.
-
-  6. Open the `unix-conda-pip.ipynb` notebook and go through the demo.
-     
-  Note: JupyterLab is an acceptable alternative to Jupyter Notebooks if you prefer JupyterLab!
+  1. Now, let's activate the environment we set-up earlier with the command `conda activate mlops-course`. If you were successful, you could see `(mlops-course)` preceeding your terminal commands.
 
 </details>
+
+<details>
+
+  <summary>Adding a Feature Branch</summary>
+
+  Let's add a feature branch to our local repo.  Earlier, we showed you how to add a feature branch and content to your repo via the Terminal.  This time we are going to show you how to do it using the VS Code GUI.  
+  
+  1. Click on the `main` <img src="images/vscode_main_branch.png" width=30px/> branch in the lower left side of the screen 
+
+  2. You will then see a drop-down menu with some branch-level option commands.  Select the `Create a new branch` option.
+
+  3. You will be prompted to enter the name for the branch.  Let's give our branch an informative name `feature-hello-world`.  The `feature` pre-fix is a common Git convention and let's our collaborators know what the purpose of the branch and the name of the feature.
+
+  4. Now that we have a feature branch to work on, let's add some code to it!
+
+</details>
+
+<details>
+  <summary>Hello World! - Part 1</summary>
+  1. Next we will review some terminal commands and make some     additions to our repo.  Do these in your terminal where your     current working directory is your repo.
+
+  * Check your current working directory: `pwd` 
+
+  * Create a new file: `touch hello_world.py`
+
+  * Create new directory: `mkdir app`
+
+  * Move file to directory: `mv hello_world.py app/hello_world.py` 
+
+  * Check that the move command worked: `cd app` and then `ls`, you
+  should see your `hello_world.py` file
+
+  * Lastly, lets clear our terminal screen: `clear`
+
+  2. Click on the `Explorer` <img src="images/vscode_explorer_tab.png" width=30px/>  tab.
+
+  3. Click on your `hello_world.py` file and type the following into the file:
+
+  ```console
+  print("hello world! let's do some ml ops!")
+  ```
+
+  4. Save. And now go to the integrated terminal by clicking `CTRL + ~`. In the terminal run your first program of the class by doing `cd app` -> `python hello_world.py`. Congrats, we are off to a great start!
+
+</details>
+
+<details>
+  <summary>Hello World! - Part 2 - Notebook Edition</summary>
+
+  1. Create a new file under `app` by clicking on the `Add file` button <img src="images/vscode_add_file.png" width=30px/> and let's name this file `hello_world.ipynb`. The `.ipynb` extension is a notebook extension which will allow you to interact with your code via a notebook in  VS Code, instead of a vanilla Python file. You might need to select your kernel in the top right of the notebook file, if so, choose the one we created previously.
+  
+  2. In the first cell of `hello_world.ipynb` lets do our imports. 
+
+      ```
+      import pandas as pd
+      import numpy as np
+      import matplotlib.pyplot as plt
+      ```
+
+  3. Run the cell by either clicking the play button or by doing `CTRL + ENTER`. 
+
+  4. Create a new cell and in that put the following code:
+      ```
+      np.random.seed(0)
+
+      values = np.random.randn(100) # array of normally distributed random numbers
+      s = pd.Series(values) # generate a pandas series
+      s.plot(kind='hist', title='Normally distributed random values') # hist computes distribution
+      plt.show()   
+      ```
+      
+  5. Run the cell and you should see your histogram plot! Well done. 
+
+  ![coding histogram](images/coding_histogram.jpeg)
+
+  6. Now let's commit our code to our remote repository. This can be done one of two ways - either through the terminal or through VS Code's GUI. I'll explain both ways and you can choose which you'll use.
+    
+  * Click `Source Control` <img src="images/vscode_source_control_tab.png" width=30px/>  on the left icon bar.
+
+  * Add a message to your commit by typing in the message field. 
+
+  * Click the check mark <img src="images/vscode_commit_check_mark.png" width=30px/> button under changes to add your files to this commit.  If you haven't saved your changes, you will be prompted to `Save All and Commit`.  Click `Save All and Commit`.
+
+  * Click the elipsis in `Source Control` <img src="images/vscode_ellipsis.png" width=30px/> ribbon and click `Push`.  You may also be prompted to `Sync Changes`.  This will do Pull and Push, which will fetch new changes to the code and push your updates as well.
+
+  * You can then put in a pull request in GitHub <img src="images/github_pull_request.png" width=100px/>  to merge into the branch that you pulled from, in this case the main branch.  In real life, you would then review the code changes with another developer/team lead/supervisor and address any potential code conflicts.  
+  
+  <p align = "center" draggable=”false” ><img src="images/github_pull_request_compare.png" 
+      width="500px"
+      height="auto"/>
+  </p>
+  
+</details>
+
 
 <p></p>
 
