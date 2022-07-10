@@ -551,6 +551,15 @@ Then click `Create Repository`.
   * Add a message to your commit by typing in the message field. 
 
   * Click the check mark <img src="images/vscode_commit_check_mark.png" width=30px/> button under changes to add your files to this commit.  If you haven't saved your changes, you will be prompted to `Save All and Commit`.  Click `Save All and Commit`.
+  
+     
+     
+       <details>
+       <summary>OPTIONAL: Manually staging individual files</summary>
+          1. You can manually stage files by pressing the `+` button.
+          
+       ![image](https://i.imgur.com/2NnnSbc.png)
+       </details>
 
   * Click the elipsis in `Source Control` <img src="images/vscode_ellipsis.png" width=30px/> ribbon and click `Push`.  You may also be prompted to `Sync Changes`.  This will do Pull and Push, which will fetch new changes to the code and push your updates as well.
 
