@@ -324,7 +324,11 @@ Then click `Create Repository`.
 <details>
   <summary>Adding The FourthBrain Whodunit? Content to Your Repo</summary>
 
-  1. Check your remote git. 
+  1. `cd` into your repo and check your remote git. 
+
+  ```console
+  cd {your repo name}
+  ```
 
   ```console
   git remote -v
