@@ -157,13 +157,13 @@ Enter the following commands in terminal to setup your environment. When prompte
 </details>
 
 <details>
-  <summary>Install the Jupyter Notebook Extension</summary>
+  <summary>Install the Python and Jupyter Notebook Extensions</summary>
 
   1. Click the `Extensions` <img src="images/vscode_extensions_tab.png" width=30px/> tab on the left side of the window.
 
   2. Type "Python" in the search bar.
 
-  3. Click `Install` <img src="images/vscode_install.png" width=30px/>  on the <ins><strong>Microsoft Jupyter Notebook Extension</strong></ins>
+  3. Click `Install` <img src="images/vscode_install.png" width=30px/>  on both the <ins><strong>Python Extension</strong></ins> and on the <ins><strong>Microsoft Jupyter Notebook Extension</strong></ins>
 
 </details>
 
@@ -174,7 +174,7 @@ Enter the following commands in terminal to setup your environment. When prompte
 
   2. Open the Command Pallette 
     <strong>(Mac: </strong></ins> <kbd>Shift</kbd><kbd>⌘</kbd>+<kbd>P</kbd> 
-    ,<strong> Windows: </strong></ins> <kbd>Ctrl</kbd>+<kbd>P</kbd>)
+    ,<strong> Windows: </strong></ins> <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
 
   3. Type "Python" in the search bar.
 
