@@ -70,15 +70,15 @@ Let's start off by setting up our environment!  Review the environment setup ins
   <summary>Windows</summary>
 
 
-* Install [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) using Powershell
+* Install [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) and Ubuntu 20.04 LTS (Long-term support) in one line using Powershell
 
 ```powershell
 wsl --install -d Ubuntu-20.04
 ```
-* Install [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) (You can even make it your [default!](https://devblogs.microsoft.com/commandline/windows-terminal-as-your-default-command-line-experience/))
-* Install [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9pdxgncfsczv?activetab=pivot:overviewtab)
-
 * Make sure you've install the correct version with the command `wsl -l -v`
+
+* Install [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) (You can even make it your [default!](https://devblogs.microsoft.com/commandline/windows-terminal-as-your-default-command-line-experience/))
+
     
 (If you find yourself getting stuck on the WSL2 install, [here](https://www.youtube.com/watch?v=VMZH9Pj2dXw&ab_channel=StefanRows) is a link to video instructions)
 
