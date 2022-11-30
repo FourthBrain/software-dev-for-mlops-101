@@ -75,7 +75,9 @@ Let's start off by setting up our environment!  Review the environment setup ins
 ```powershell
 wsl --install -d Ubuntu-20.04
 ```
-* Install [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) (You can even make it your [default!](https://devblogs.microsoft.com/commandline/windows-terminal-as-your-default-command-line-experience/))
+* Install [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) (You can even make it your [default!](https://devblogs.microsoft.com/commandline/
+windows-terminal-as-your-default-command-line-experience/))
+
 * Install [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu/9pdxgncfsczv?activetab=pivot:overviewtab)
 
 * Make sure you've install the correct version with the command `wsl -l -v`
@@ -109,7 +111,7 @@ Open terminal using <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd>. Enter the fol
 </details>
 
 <details>
-  <summary>macOS</summary>
+  <summary>macOS Intel</summary>
 
 To get started, we need to download the MacOS package manager, <strong>Homebrew</strong> :beer:, so that we can download the tools we'll be using in the course. If you don't already have Homebrew installed, run the following commands:
 
@@ -137,6 +139,47 @@ Enter the following commands in terminal to setup your environment. When prompte
 | :memo: **VS Code** | Development Environment | [Download](https://code.visualstudio.com/download) |
 
 </details>
+
+<details>
+  <summary>macOS ARM</summary><br>
+
+To leverage the Mx chip from Python, you must use a special Python distribution called [Miniforge](https://github.com/conda-forge/miniforge). 
+Open terminal using <kbd>⌘</kbd>+<kbd>Space</kbd> and type `terminal`. Enter the following commands in terminal to setup your environment.
+
+Miniforge can be installed using Homebrew or from the source. We suggest trying Homebrew option first.
+
+### Option 1 Homebrew
+
+To get started, we need to download the MacOS package manager, <strong>Homebrew</strong> :beer:, so that we can download the tools we'll be using in the course. If you don't already have Homebrew installed, run the following commands:
+
+1. Open terminal using <kbd>⌘</kbd>+<kbd>Space</kbd> and type `terminal`.
+
+2. Install Homebrew using the command below, following the command prompts:
+
+    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` 
+
+3. Update Homebrew (This may take a few minutes)
+
+    `git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow`
+
+    `git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask fetch`
+     
+4. Install the `wget` command to continue following along
+     `brew install wget`
+
+5. Install the `xcode-select` command-line utilities by typing the following command in the terminal
+
+    `xcode-select --install`
+
+After running the commands from the table, when prompted, initiate your conda base environment by running `conda init`.
+| Tool | Purpose | Command                                                                                           |
+| :-------- | :-------- | :------------------------------------------------------------------------------------------------ |
+| :snake: **Miniforge**  | Python & ML Toolkits | `brew install miniforge` |
+| :octocat: **Git**  | Version Control | `sudo apt update && sudo apt upgrade` <br> `sudo apt install git-all`   |
+| :memo: **VS Code** | Development Environment | [Download](https://code.visualstudio.com/download) |
+
+</details>
+
 
 <p></p>
 
