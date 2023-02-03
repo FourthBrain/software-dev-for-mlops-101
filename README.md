@@ -73,7 +73,7 @@ Let's start off by setting up our environment!  Review the environment setup ins
 * Install [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) using Powershell
 
 ```powershell
-wsl --install -d Ubuntu-20.04
+wsl --install
 ```
 * Install [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) (You can even make it your [default!](https://devblogs.microsoft.com/commandline/
 windows-terminal-as-your-default-command-line-experience/))
