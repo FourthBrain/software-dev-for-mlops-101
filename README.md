@@ -627,7 +627,4 @@ Then click `Create Repository`.
 # :detective: Whodunit? 
 Now let's practice  what you have learned by playing the [Whodunit?](https://github.com/FourthBrain/whodunit) game!
 
-# 🤖 Build Your own RAQA!
-Are you ready? Let's get to building your [first LLM](https://github.com/AI-Maker-Space/LangChain-Concepts-101---Build-Your-Own-RAQA-System)!
-
 ### That's it for now!  And so it begins.... :)
